@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/listerOeuvres',[\App\Http\Controllers\OeuvresController::class, 'ListerOeuvres']);
+Route::get('/listerVisiteurs',[\App\Http\Controllers\VisiteurController::class, 'ListerVisiteurs']);
+Route::get('/listerTickets',[\App\Http\Controllers\TicketsController::class, 'ListerTickets']);
+
+Route::get('/ajouterOeuvres',[\App\Http\Controllers\OeuvresController::class, 'addOeuvre']);
+
